@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7008-9bf7-79dc481678c2",
+  "title": "Spatial audio for machinery, alarms, distant combat.",
+  "milestoneId": "milestone_01a07f9d-50e8-7004-8d8c-9499f7998af9",
+  "category": "Audio",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 150,
+    "endLine": 150
+  },
+  "sourceKey": "d5093446834b4402",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7009-9782-e31075fd3462",
+  "title": "Music transitions: ambient → tension → combat → ambient.",
+  "milestoneId": "milestone_01a07f9d-50e8-7004-8d8c-9499f7998af9",
+  "category": "Audio",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 151,
+    "endLine": 151
+  },
+  "sourceKey": "35908ed4da31c067",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

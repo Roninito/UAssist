@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-700f-9aa6-0c5cb00e5a9b",
+  "title": "Mini-boss or set-piece encounter.",
+  "milestoneId": "milestone_01a07f9d-50e8-700c-aa26-25c8e2f83305",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 167,
+    "endLine": 167
+  },
+  "sourceKey": "374e67bdbd8043ce",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

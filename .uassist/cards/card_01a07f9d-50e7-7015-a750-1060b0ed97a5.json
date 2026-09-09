@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7015-a750-1060b0ed97a5",
+  "title": "AI states: patrol (waypoints), search (last known position), alert, attack.",
+  "milestoneId": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "category": "AI",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 112,
+    "endLine": 112
+  },
+  "sourceKey": "cca94929694cf2ef",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

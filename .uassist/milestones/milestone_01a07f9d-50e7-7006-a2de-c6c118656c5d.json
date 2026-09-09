@@ -1,0 +1,21 @@
+{
+  "id": "milestone_01a07f9d-50e7-7006-a2de-c6c118656c5d",
+  "title": "Survival and items",
+  "phaseNumber": 1,
+  "description": "The player is a body with needs and a cargo hold.",
+  "timebox": {
+    "minWeeks": 3,
+    "maxWeeks": 4
+  },
+  "gateCondition": "All items serialize/deserialize correctly. Save/load round-trips with items intact.",
+  "demoCondition": "Pick up a medkit and an oxygen tank. Walk into a radiation zone and take damage. Use the medkit. Put on the tank. Stay longer.",
+  "status": "planned",
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 82,
+    "endLine": 98
+  },
+  "sourceKey": "9f79b346b36d617b",
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

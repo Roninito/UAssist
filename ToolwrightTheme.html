@@ -1,0 +1,635 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ToolwrightTheme — Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+      /* ================================================================
+       * ToolwrightTheme
+       * A unified design system for Toolwright and UAssist documentation.
+       * Supports light (Claude-article) and dark (editor) modes via
+       * prefers-color-scheme.
+       * =============================================================== */
+
+      :root {
+        /* Light mode: the clean Claude artifact/article look */
+        --bg: #f8f9fb;
+        --surface: #ffffff;
+        --surface-2: #f3f5f7;
+        --fg: #111827;
+        --fg-strong: #030712;
+        --muted: #4b5563;
+        --faint: #9ca3af;
+        --line: #e2e5e9;
+        --line-strong: #d1d5db;
+        --border: #d1d5db;
+        --hairline: #e5e7eb;
+        --accent: #0ea5e9;
+        --accent-text: #0284c7;
+        --accent-soft: rgba(14, 165, 233, 0.08);
+        --pill-blue: #e0f2fe;
+        --pill-blue-text: #0369a1;
+        --pill-green: #dcfce7;
+        --pill-green-text: #15803d;
+        --pill-yellow: #fef3c7;
+        --pill-yellow-text: #b45309;
+        --pill-red: #fee2e2;
+        --pill-red-text: #b91c1c;
+        --pill-grey: #f3f4f6;
+        --pill-grey-text: #4b5563;
+        --ok: #16a34a;
+        --warn: #d97706;
+        --bad: #dc2626;
+
+        --font-sans: 'Archivo', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        --font-serif: 'Merriweather', Georgia, "Times New Roman", serif;
+        --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+        --measure: 680px;
+        --wide: 960px;
+        --radius: 6px;
+        --gap-xs: 6px;
+        --gap-sm: 10px;
+        --gap-md: 18px;
+        --gap-lg: 28px;
+        --gap-xl: 48px;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          /* Dark mode: the Toolwright editor UI look */
+          --bg: #050505;
+          --surface: #0b0d0f;
+          --surface-2: #121519;
+          --fg: #e9ecef;
+          --fg-strong: #ffffff;
+          --muted: #767f89;
+          --faint: #4b545d;
+          --line: #1d2228;
+          --line-strong: #2b333c;
+          --border: #1d2228;
+          --hairline: #151a1f;
+          --accent: #4dd2ff;
+          --accent-text: #4dd2ff;
+          --accent-soft: rgba(77, 210, 255, 0.08);
+          --pill-blue: rgba(77, 210, 255, 0.10);
+          --pill-blue-text: #4dd2ff;
+          --pill-green: rgba(127, 211, 155, 0.10);
+          --pill-green-text: #7fd39b;
+          --pill-yellow: rgba(255, 181, 71, 0.10);
+          --pill-yellow-text: #ffb547;
+          --pill-red: rgba(255, 122, 122, 0.10);
+          --pill-red-text: #ff7a7a;
+          --pill-grey: rgba(118, 127, 137, 0.12);
+          --pill-grey-text: #767f89;
+          --ok: #7fd39b;
+          --warn: #ffb547;
+          --bad: #ff7a7a;
+        }
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+      html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: var(--font-sans);
+        font-size: 16px;
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: var(--accent-text); text-decoration: none; }
+      a:hover { text-decoration: underline; }
+      code, .mono { font-family: var(--font-mono); font-size: 0.9em; }
+      :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+      /* ---------- chrome ---------- */
+      .rail {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(var(--bg), 0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      @supports not (backdrop-filter: blur(8px)) {
+        .rail { background: var(--bg); }
+      }
+      .rail .wrap {
+        max-width: var(--wide);
+        margin: 0 auto;
+        padding: 0 var(--gap-md);
+        display: flex;
+        align-items: center;
+        gap: var(--gap-md);
+        height: 54px;
+      }
+      .brand { font-weight: 700; letter-spacing: -0.02em; font-size: 15px; color: var(--fg-strong); }
+      .brand span { color: var(--faint); font-weight: 400; }
+      .rail nav {
+        margin-left: auto;
+        display: flex;
+        gap: var(--gap-md);
+        font-size: 13.5px;
+        color: var(--muted);
+      }
+      .rail nav a { color: var(--muted); text-decoration: none; }
+      .rail nav a:hover { color: var(--fg); text-decoration: underline; }
+      @media (max-width: 720px) { .rail nav { display: none; } }
+
+      /* ---------- hero ---------- */
+      .hero {
+        padding: var(--gap-xl) 0 var(--gap-lg);
+        border-bottom: 1px solid var(--line);
+      }
+      .hero .wrap {
+        max-width: var(--measure);
+        margin: 0 auto;
+        padding: 0 var(--gap-md);
+      }
+      .hero h1 {
+        font-family: var(--font-sans);
+        font-size: clamp(34px, 5vw, 48px);
+        line-height: 1.08;
+        letter-spacing: -0.03em;
+        font-weight: 700;
+        margin: 0 0 var(--gap-md);
+        color: var(--fg-strong);
+        max-width: 22ch;
+      }
+      .lede {
+        font-family: var(--font-serif);
+        font-size: 18px;
+        line-height: 1.7;
+        color: var(--muted);
+        max-width: var(--measure);
+        margin: 0 0 var(--gap-sm);
+      }
+      .lede strong { color: var(--fg); font-weight: 600; }
+      .meta {
+        display: flex;
+        gap: var(--gap-sm);
+        flex-wrap: wrap;
+        font-size: 13px;
+        color: var(--faint);
+        margin-top: var(--gap-md);
+      }
+
+      /* ---------- article ---------- */
+      .wrap { max-width: var(--measure); margin: 0 auto; padding: 0 var(--gap-md); }
+      .wide { max-width: var(--wide); margin: 0 auto; padding: 0 var(--gap-md); }
+      article { padding: var(--gap-xl) 0; }
+      article > section { margin-bottom: var(--gap-xl); }
+
+      h2 {
+        font-family: var(--font-sans);
+        font-size: clamp(26px, 3.4vw, 32px);
+        line-height: 1.14;
+        letter-spacing: -0.025em;
+        font-weight: 700;
+        margin: var(--gap-xl) 0 var(--gap-md);
+        color: var(--fg-strong);
+        max-width: 26ch;
+      }
+      h3 {
+        font-family: var(--font-sans);
+        font-size: 15px;
+        font-weight: 600;
+        margin: var(--gap-lg) 0 var(--gap-xs);
+        color: var(--fg-strong);
+        letter-spacing: -0.01em;
+      }
+      h4 {
+        font-family: var(--font-sans);
+        font-size: 14px;
+        font-weight: 600;
+        margin: var(--gap-md) 0 var(--gap-xs);
+        color: var(--fg-strong);
+      }
+      p {
+        font-family: var(--font-serif);
+        font-size: 16px;
+        line-height: 1.75;
+        color: var(--fg);
+        margin: 0 0 var(--gap-md);
+        max-width: var(--measure);
+      }
+      p b, p strong { color: var(--fg-strong); font-weight: 600; }
+      ul, ol {
+        margin: 0 0 var(--gap-md) var(--gap-md);
+        font-family: var(--font-serif);
+        color: var(--fg);
+      }
+      li { margin: var(--gap-xs) 0; }
+
+      /* ---------- aside ---------- */
+      .aside {
+        border-left: 3px solid var(--line-strong);
+        padding: 2px 0 2px var(--gap-md);
+        margin: var(--gap-lg) 0;
+        font-family: var(--font-serif);
+        font-size: 15.5px;
+        color: var(--muted);
+        max-width: 60ch;
+      }
+      .aside b { color: var(--fg); font-weight: 600; }
+
+      /* ---------- callouts ---------- */
+      .callout {
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--accent);
+        background: var(--surface);
+        padding: var(--gap-md);
+        border-radius: var(--radius);
+        margin: 0 0 var(--gap-md);
+        font-family: var(--font-serif);
+      }
+      .callout p:last-child { margin-bottom: 0; }
+      .tip {
+        border-left: 3px solid var(--ok);
+        background: var(--surface);
+        padding: var(--gap-sm) var(--gap-md);
+        border-radius: 0 var(--radius) var(--radius) 0;
+        margin: 0 0 var(--gap-md);
+        font-family: var(--font-serif);
+      }
+      .tip p:last-child { margin-bottom: 0; }
+
+      /* ---------- tables ---------- */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--font-sans);
+        font-size: 14px;
+        margin-bottom: var(--gap-md);
+        border: 1px solid var(--border);
+        background: var(--surface);
+      }
+      th, td {
+        padding: var(--gap-sm) var(--gap-sm);
+        text-align: left;
+        border-bottom: 1px solid var(--line);
+        vertical-align: top;
+      }
+      th {
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        color: var(--muted);
+        font-weight: 600;
+        background: var(--surface-2);
+        border-bottom: 1px solid var(--line-strong);
+      }
+      tr:last-child td { border-bottom: 0; }
+      tr:hover td { background: var(--accent-soft); }
+      td code { font-size: 12px; }
+
+      /* ---------- code ---------- */
+      code {
+        background: var(--surface-2);
+        padding: 2px 5px;
+        border-radius: 4px;
+        border: 1px solid var(--hairline);
+        color: var(--fg-strong);
+      }
+      pre {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: var(--gap-md);
+        overflow-x: auto;
+        font-size: 13px;
+        line-height: 1.7;
+        margin: 0 0 var(--gap-md);
+        color: var(--fg);
+      }
+      pre code {
+        background: transparent;
+        border: none;
+        padding: 0;
+      }
+
+      /* ---------- pills / chips ---------- */
+      .pill, .tag {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        padding: 3px 9px;
+        border-radius: 999px;
+        font-size: 11.5px;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        font-family: var(--font-mono);
+      }
+      .pill { font-family: var(--font-sans); }
+      .pill-blue, .tag-blue { background: var(--pill-blue); color: var(--pill-blue-text); }
+      .pill-green, .tag-green { background: var(--pill-green); color: var(--pill-green-text); }
+      .pill-yellow, .tag-yellow { background: var(--pill-yellow); color: var(--pill-yellow-text); }
+      .pill-red, .tag-red { background: var(--pill-red); color: var(--pill-red-text); }
+      .pill-grey, .tag-grey { background: var(--pill-grey); color: var(--pill-grey-text); }
+
+      /* ---------- mock editor chrome ---------- */
+      .mock {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        margin: var(--gap-lg) 0 var(--gap-sm);
+        color: var(--fg);
+        font-size: 13px;
+        line-height: 1.55;
+        overflow: hidden;
+        border-radius: var(--radius);
+      }
+      .mock-bar {
+        display: flex;
+        align-items: center;
+        gap: var(--gap-sm);
+        padding: 9px 14px;
+        border-bottom: 1px solid var(--line);
+        background: var(--surface-2);
+        font-size: 11.5px;
+        color: var(--faint);
+        font-family: var(--font-mono);
+        flex-wrap: wrap;
+      }
+      .mock-bar .mode { color: var(--accent-text); }
+      .mock-bar .right { margin-left: auto; color: var(--faint); }
+      .mock-body { padding: var(--gap-md) 14px; }
+      .mock p { font-family: var(--font-sans); font-size: 13px; }
+      .mock .said {
+        border-left: 2px solid var(--accent);
+        padding: 2px 0 2px 14px;
+        margin: 0 0 var(--gap-md);
+        font-size: 14px;
+        color: var(--fg-strong);
+        max-width: 60ch;
+        font-family: var(--font-serif);
+      }
+      .mock .reply {
+        color: var(--muted);
+        font-size: 13px;
+        max-width: 62ch;
+        margin: 0 0 var(--gap-xs);
+        font-family: var(--font-sans);
+      }
+      .mock .reply b { color: var(--fg-strong); font-weight: 500; }
+      .cap {
+        font-size: 13px;
+        color: var(--faint);
+        margin: 0 0 var(--gap-lg);
+        max-width: 64ch;
+        font-family: var(--font-sans);
+      }
+      .cap b { color: var(--muted); font-weight: 500; }
+
+      /* ---------- rows / lists inside mock ---------- */
+      .row {
+        display: flex;
+        gap: var(--gap-sm);
+        align-items: baseline;
+        padding: 6px 0;
+        border-bottom: 1px solid var(--line);
+        font-family: var(--font-sans);
+        font-size: 12.5px;
+      }
+      .row:last-child { border-bottom: 0; }
+      .row .k { color: var(--faint); flex: 0 0 110px; font-size: 11.5px; font-family: var(--font-mono); }
+      .row .v { color: var(--fg); }
+      .row .v.u { color: var(--accent-text); }
+      .row .v.ok { color: var(--ok); }
+
+      /* ---------- dock / tools ---------- */
+      .dock {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        padding: 8px;
+        border: 1px solid var(--line);
+        background: var(--bg);
+        width: fit-content;
+        max-width: 100%;
+      }
+      .tool {
+        width: 72px;
+        height: 66px;
+        border: 1px solid var(--line);
+        background: var(--surface-2);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+        color: var(--faint);
+        text-align: center;
+        font-family: var(--font-mono);
+        font-size: 9px;
+      }
+      .tool svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.4; }
+      .tool.on { color: var(--accent-text); border-color: var(--accent-soft); }
+      .tool.new { color: var(--warn); border-color: var(--pill-yellow); background: var(--pill-yellow); }
+      .tool b { font-size: 9px; font-weight: 500; letter-spacing: 0.01em; color: inherit; }
+
+      /* ---------- queue ---------- */
+      .queue {
+        border: 1px solid var(--border);
+        background: var(--surface);
+        border-radius: var(--radius);
+      }
+      .q {
+        display: flex;
+        gap: var(--gap-sm);
+        align-items: baseline;
+        padding: 12px var(--gap-md);
+        border-bottom: 1px solid var(--line);
+        font-size: 14px;
+        font-family: var(--font-sans);
+      }
+      .q:last-child { border-bottom: 0; }
+      .q .txt { color: var(--muted); }
+      .q .txt b { color: var(--fg-strong); font-weight: 500; }
+
+      /* ---------- footer ---------- */
+      footer {
+        border-top: 1px solid var(--line);
+        padding: var(--gap-lg) 0 var(--gap-xl);
+        color: var(--faint);
+        font-size: 13px;
+      }
+      footer .wrap { display: flex; justify-content: space-between; gap: var(--gap-md); flex-wrap: wrap; }
+
+      /* ---------- responsive ---------- */
+      @media (max-width: 640px) {
+        .hero h1 { font-size: 30px; }
+        h2 { font-size: 24px; }
+        .row { flex-direction: column; gap: 2px; }
+        .row .k { flex: 0 0 auto; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <header class="rail">
+      <div class="wrap">
+        <div class="brand">ToolwrightTheme</div>
+        <nav>
+          <a href="#principles">Principles</a>
+          <a href="#palette">Palette</a>
+          <a href="#typography">Typography</a>
+          <a href="#components">Components</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="hero">
+      <div class="wrap">
+        <h1>A design system for Toolwright and UAssist docs</h1>
+        <p class="lede">
+          <strong>ToolwrightTheme</strong> combines two surfaces: a bright article mode for long-form help and tutorials, and a dark editor mode for the tool UI. Both share the same type scale, spacing, and component vocabulary. The theme responds to <code>prefers-color-scheme</code>.
+        </p>
+        <div class="meta">
+          <span class="pill pill-blue">Light article mode</span>
+          <span class="pill pill-grey">Dark editor mode</span>
+          <span class="pill pill-green">Auto switching</span>
+        </div>
+      </div>
+    </div>
+
+    <article class="wrap">
+
+      <section id="principles">
+        <h2>Principles</h2>
+        <div class="aside"><b>Article first.</b> Documentation is read like a book, not operated like a dashboard. The body is single-column, generous, and low-contrast enough to read for minutes.</div>
+        <div class="aside"><b>Editor when it matters.</b> The dark mode keeps the same components but swaps to high-contrast panels, borders, and accent colours so tools remain readable under long use.</div>
+        <div class="aside"><b>One vocabulary.</b> The same pill, queue, table, mock, and code styles work in both modes; only the colour values change.</div>
+      </section>
+
+      <section id="palette">
+        <h2>Colour palette</h2>
+        <p>The theme uses semantic variables that swap in dark mode. Hard-coded colour values should almost never appear in content CSS.</p>
+
+        <table>
+          <tr><th>Token</th><th>Light</th><th>Dark</th><th>Use</th></tr>
+          <tr><td><code>--bg</code></td><td>#f8f9fb</td><td>#050505</td><td>Page background</td></tr>
+          <tr><td><code>--surface</code></td><td>#ffffff</td><td>#0b0d0f</td><td>Cards, mock panels</td></tr>
+          <tr><td><code>--surface-2</code></td><td>#f3f5f7</td><td>#121519</td><td>Subheads, table headers</td></tr>
+          <tr><td><code>--fg</code></td><td>#111827</td><td>#e9ecef</td><td>Body text</td></tr>
+          <tr><td><code>--fg-strong</code></td><td>#030712</td><td>#ffffff</td><td>Headings, bold</td></tr>
+          <tr><td><code>--muted</code></td><td>#4b5563</td><td>#767f89</td><td>Secondary text</td></tr>
+          <tr><td><code>--faint</code></td><td>#9ca3af</td><td>#4b545d</td><td>Labels, captions</td></tr>
+          <tr><td><code>--line</code></td><td>#e2e5e9</td><td>#1d2228</td><td>Dividers</td></tr>
+          <tr><td><code>--border</code></td><td>#d1d5db</td><td>#1d2228</td><td>Box borders</td></tr>
+          <tr><td><code>--accent</code></td><td>#0ea5e9</td><td>#4dd2ff</td><td>Links, active state</td></tr>
+          <tr><td><code>--ok</code></td><td>#16a34a</td><td>#7fd39b</td><td>Success</td></tr>
+          <tr><td><code>--warn</code></td><td>#d97706</td><td>#ffb547</td><td>Warning / new</td></tr>
+          <tr><td><code>--bad</code></td><td>#dc2626</td><td>#ff7a7a</td><td>Error / blocker</td></tr>
+        </table>
+      </section>
+
+      <section id="typography">
+        <h2>Typography</h2>
+        <table>
+          <tr><th>Role</th><th>Font</th><th>Use</th></tr>
+          <tr><td><code>--font-sans</code></td><td>Archivo, system sans</td><td>Headings, UI labels, tables, pills</td></tr>
+          <tr><td><code>--font-serif</code></td><td>Merriweather, Georgia</td><td>Body text, asides, leads</td></tr>
+          <tr><td><code>--font-mono</code></td><td>JetBrains Mono</td><td>Code, paths, tags</td></tr>
+        </table>
+
+        <h3>Type scale</h3>
+        <p style="font-size:34px;font-weight:700;line-height:1.1;font-family:var(--font-sans)">Hero / H1 — bold sans, tight leading</p>
+        <p style="font-size:28px;font-weight:700;line-height:1.15;font-family:var(--font-sans);margin-top:12px">H2 — section heading</p>
+        <p style="font-size:15px;font-weight:600;margin-top:12px">H3 — small bold sans</p>
+        <p style="font-family:var(--font-serif);font-size:16px;line-height:1.75;margin-top:12px">Body — Merriweather, comfortable line-height, ~680 px measure.</p>
+        <p class="lede" style="margin-top:12px">Lead — 18 px serif, slightly muted, for introductions.</p>
+      </section>
+
+      <section id="components">
+        <h2>Components</h2>
+
+        <h3>Pills</h3>
+        <p>
+          <span class="pill pill-blue">blue</span>
+          <span class="pill pill-green">green</span>
+          <span class="pill pill-yellow">yellow</span>
+          <span class="pill pill-red">red</span>
+          <span class="pill pill-grey">grey</span>
+        </p>
+
+        <h3>Tags (mono)</h3>
+        <p>
+          <span class="tag tag-blue">1 phase → 4 slices</span>
+          <span class="tag tag-green">solved</span>
+          <span class="tag tag-yellow">agent</span>
+          <span class="tag tag-red">blocker</span>
+        </p>
+
+        <h3>Queue</h3>
+        <div class="queue">
+          <div class="q"><span class="tag tag-red">blocker</span><span class="txt"><b>oak-bench-02</b> is CC-BY and this project ships commercially — attribution missing</span></div>
+          <div class="q"><span class="tag tag-grey">scale</span><span class="txt"><b>market-stall</b> imported at 0.4× confidence — review before placing</span></div>
+          <div class="q"><span class="tag tag-yellow">agent</span><span class="txt"><b>Job 114</b> returned a diff for <b>save-slot-migration</b> — awaiting review</span></div>
+        </div>
+
+        <h3>Mock editor panel</h3>
+        <div class="mock">
+          <div class="mock-bar"><span class="mode">Scene</span><span>market-district</span><span class="right">6 selected</span></div>
+          <div class="mock-body">
+            <p class="said">Place a wall lamp every three metres along the top edge, facing out, slight random yaw so they don't look stamped.</p>
+            <p class="reply"><b>Placed 19 lamps</b> across 6 walls · tagged <code>dressing</code></p>
+            <div class="dock">
+              <div class="tool on"><svg viewBox="0 0 24 24"><path d="M5 3l14 8-6 1.6L10 20z"/></svg><b>Select</b></div>
+              <div class="tool"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><b>Marker</b></div>
+              <div class="tool new"><svg viewBox="0 0 24 24"><path d="M3 18h18"/><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/></svg><b>Along edge</b></div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Callouts</h3>
+        <div class="callout">
+          <p>This is a default callout with a left accent in <code>--accent</code>. Use it for rules and things worth remembering.</p>
+        </div>
+        <div class="tip">
+          <p>This is a tip callout with a green accent. Use it for suggestions that make the reader's life easier.</p>
+        </div>
+      </section>
+
+      <section id="tokens">
+        <h2>CSS tokens</h2>
+        <p>Copy the <code>:root</code> block into any UAssist or Toolwright page to adopt the theme. Add the media query to support dark mode.</p>
+        <pre><code>:root {
+  --bg: #f8f9fb;
+  --surface: #ffffff;
+  --surface-2: #f3f5f7;
+  --fg: #111827;
+  --fg-strong: #030712;
+  --muted: #4b5563;
+  --faint: #9ca3af;
+  --line: #e2e5e9;
+  --line-strong: #d1d5db;
+  --border: #d1d5db;
+  --accent: #0ea5e9;
+  --accent-text: #0284c7;
+  --ok: #16a34a;
+  --warn: #d97706;
+  --bad: #dc2626;
+
+  --font-sans: 'Archivo', system-ui, sans-serif;
+  --font-serif: 'Merriweather', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --measure: 680px;
+  --wide: 960px;
+  --radius: 6px;
+}</code></pre>
+      </section>
+
+    </article>
+
+    <footer>
+      <div class="wrap">ToolwrightTheme — shared by Toolwright and UAssist documentation.</div>
+    </footer>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7012-9035-074bc1d6c678",
+  "title": "First-pass lighting pass, post-processing, optimization.",
+  "milestoneId": "milestone_01a07f9d-50e8-700c-aa26-25c8e2f83305",
+  "category": "Art",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 170,
+    "endLine": 170
+  },
+  "sourceKey": "f02ca1c57dea1a7d",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

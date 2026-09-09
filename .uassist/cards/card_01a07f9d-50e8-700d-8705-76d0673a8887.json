@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-700d-8705-76d0673a8887",
+  "title": "Colony sector with multiple paths: combat route, stealth route, environmental route.",
+  "milestoneId": "milestone_01a07f9d-50e8-700c-aa26-25c8e2f83305",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 165,
+    "endLine": 165
+  },
+  "sourceKey": "6eb8eca30713b867",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

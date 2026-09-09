@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UAssist — Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="brand">UAssist</span>
+      <nav class="nav">
+        <a href="/board">Board</a>
+        <a href="/project" aria-current="page">Project</a>
+        <a href="/docs">Docs</a>
+        <a href="/decisions">Decisions</a>
+      </nav>
+      <span class="project-name" id="project-name">…</span>
+      <span class="spacer"></span>
+      <span class="status-dot" id="conn" data-state="syncing" title="Live updates"></span>
+    </header>
+
+    <main class="meta-page" id="meta"></main>
+
+    <script type="module" src="./project.ts"></script>
+  </body>
+</html>

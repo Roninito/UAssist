@@ -1,0 +1,12 @@
+{
+  "name": "@uassist/core",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Domain model, SQLite store, JSON mirror, plan parser, validators, agent adapters.",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  }
+}

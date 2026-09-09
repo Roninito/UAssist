@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7013-b6cc-31b821dfbd0e",
+  "title": "Weapon equipping/unequipping from inventory.",
+  "milestoneId": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 110,
+    "endLine": 110
+  },
+  "sourceKey": "5e89ffda7cb4f63d",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

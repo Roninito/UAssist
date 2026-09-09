@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7007-bea0-7a744baf0774",
+  "title": "Data model: `Item`, `Weapon`, `Ammo`, `Tool`, `Consumable`, `Wearable`.",
+  "milestoneId": "milestone_01a07f9d-50e7-7006-a2de-c6c118656c5d",
+  "category": "Systems",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 88,
+    "endLine": 88
+  },
+  "sourceKey": "f0a30c87636c47c3",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

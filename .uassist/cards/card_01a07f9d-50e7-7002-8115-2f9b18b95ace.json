@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7002-8115-2f9b18b95ace",
+  "title": "ProBuilder greybox: floor, walls, a gap to jump, a pipe to roll under, a ledge to climb.",
+  "milestoneId": "milestone_01a07f9d-50e5-7000-a340-446ef5cf52d1",
+  "category": "Art",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 73,
+    "endLine": 73
+  },
+  "sourceKey": "d4c80e2800e75d19",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

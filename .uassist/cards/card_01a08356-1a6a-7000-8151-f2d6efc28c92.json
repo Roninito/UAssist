@@ -1,0 +1,30 @@
+{
+  "id": "card_01a08356-1a6a-7000-8151-f2d6efc28c92",
+  "title": "Set up the Blender source directory",
+  "description": "Set up the Blender source directory this UAssist project coordinates.\n\nUnlike Unity, Blender has no project-scaffold equivalent to \"create project\" — a source directory with .blend files in it is the whole of what \"linked\" means here.\n\nSteps:\n1. Choose or create a directory to hold this project's .blend files (a \"sectors/\" or \"assets/\" subfolder is a reasonable convention if this project also has a Unity side).\n2. Save at least one .blend file into it — an empty scene is enough to make the directory a valid, linkable workspace.\n3. Link the directory's absolute path on the Project Meta page (Workspace section).",
+  "category": "Infra",
+  "kind": "task",
+  "status": "open",
+  "priority": "blocker",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "A directory exists containing at least one .blend file.",
+      "met": false
+    },
+    {
+      "text": "The directory's absolute path is linked on the Project Meta page.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788909853290,
+  "updatedAt": 1788909853290
+}

@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-700e-b950-dcc7b6390557",
+  "title": "Loot distribution, crafting station, environmental set-piece.",
+  "milestoneId": "milestone_01a07f9d-50e8-700c-aa26-25c8e2f83305",
+  "category": "Unknown",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 166,
+    "endLine": 166
+  },
+  "sourceKey": "346c3af82e24e857",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

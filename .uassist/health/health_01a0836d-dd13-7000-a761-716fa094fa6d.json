@@ -1,0 +1,11 @@
+{
+  "id": "health_01a0836d-dd13-7000-a761-716fa094fa6d",
+  "severity": "blocker",
+  "source": "workspace_incomplete",
+  "fingerprint": "workspace_incomplete:project_01a07f9d-50bd-7000-a121-1d424d8ebf68",
+  "message": "No Unity or Blender workspace is linked yet — cards can't anchor to real files, and dispatched agents have nothing real to work against. See the Project page.",
+  "autoClose": true,
+  "resolved": false,
+  "firstSeenAt": 1788911410451,
+  "lastSeenAt": 1788911410451
+}

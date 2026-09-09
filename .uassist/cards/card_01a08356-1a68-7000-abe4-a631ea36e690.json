@@ -1,0 +1,38 @@
+{
+  "id": "card_01a08356-1a68-7000-abe4-a631ea36e690",
+  "title": "Set up the Unity project",
+  "description": "Create the Unity project this UAssist project coordinates.\n\nNothing else here can point at anything real until this exists — cards, anchors, and every agent's context packet are grounded through the Asset Catalog, which has nothing to scan until this project exists on disk.\n\nSteps:\n1. Create a new Unity project (2022.3 LTS, or the latest Unity 6 LTS after its first patch — prefer whichever this machine already has installed via Unity Hub).\n2. Set the render pipeline to URP (Universal Render Pipeline) at creation, or convert immediately after — this project's stack assumes URP throughout.\n3. Create the starter folder layout under Assets/:\n   - Assets/Scripts/\n   - Assets/Prefabs/\n   - Assets/Scenes/\n   - Assets/Materials/\n   - Assets/Data/ (ScriptableObjects)\n   - Assets/Audio/\n4. Save the project. Confirm it opens without console errors.\n5. Once done, link the project's absolute path on the Project Meta page (Workspace section) — that link is what turns this card's acceptance criteria checkable and lets everything else in UAssist start referencing real files.\n\nIf a build plan has already been imported (check the Docs page), its own stack table — if it specifies a different Unity version or pipeline — takes precedence over the defaults above.",
+  "category": "Infra",
+  "kind": "task",
+  "status": "open",
+  "priority": "blocker",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "Assets/ and ProjectSettings/ exist at the project root.",
+      "met": false
+    },
+    {
+      "text": "The project opens in Unity Editor with no console errors.",
+      "met": false
+    },
+    {
+      "text": "Render pipeline is URP.",
+      "met": false
+    },
+    {
+      "text": "The project's absolute path is linked on the Project Meta page.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788909853288,
+  "updatedAt": 1788909853288
+}

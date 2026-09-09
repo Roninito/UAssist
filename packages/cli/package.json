@@ -1,0 +1,12 @@
+{
+  "name": "@uassist/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "uassist command-line control, CI hooks, batch dispatch.",
+  "bin": { "uassist": "./src/uassist.ts" },
+  "dependencies": {
+    "@uassist/core": "workspace:*",
+    "@uassist/server": "workspace:*"
+  }
+}

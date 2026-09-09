@@ -1,0 +1,21 @@
+{
+  "id": "milestone_01a07f9d-50e5-7000-a340-446ef5cf52d1",
+  "title": "Capsule in a corridor",
+  "phaseNumber": 0,
+  "description": "The whole pipe, thin. One scene, one corridor, one player.",
+  "timebox": {
+    "minWeeks": 2,
+    "maxWeeks": 3
+  },
+  "gateCondition": "Build runs. No compile errors. Play mode smoke test passes.",
+  "demoCondition": "Start the game. Walk down the corridor. Jump the gap. Roll under the pipe. Climb the ledge. It feels okay.",
+  "status": "planned",
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 64,
+    "endLine": 78
+  },
+  "sourceKey": "5b6f6367118f22a1",
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

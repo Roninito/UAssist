@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7016-b28a-932316d37205",
+  "title": "Additional colony sectors.",
+  "milestoneId": "milestone_01a07f9d-50e8-7015-b844-f06c37d9427e",
+  "category": "Unknown",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 182,
+    "endLine": 182
+  },
+  "sourceKey": "be7b0a19dd074580",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

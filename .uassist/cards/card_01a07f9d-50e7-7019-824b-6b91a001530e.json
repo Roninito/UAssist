@@ -1,0 +1,37 @@
+{
+  "id": "card_01a07f9d-50e7-7019-824b-6b91a001530e",
+  "title": "Gate: Weapons and security AI",
+  "description": "AI does not get stuck on corners (navmesh + stuck-timer fallback). Weapons compile and fire.",
+  "milestoneId": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "category": "Infra",
+  "kind": "gate",
+  "status": "open",
+  "priority": "high",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 118,
+    "endLine": 118
+  },
+  "sourceKey": "b2700ae999efd6ca",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "AI does not get stuck on corners (navmesh + stuck-timer fallback).",
+      "met": false
+    },
+    {
+      "text": "Weapons compile and fire.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

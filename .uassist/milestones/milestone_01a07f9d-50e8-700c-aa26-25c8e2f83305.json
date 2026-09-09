@@ -1,0 +1,21 @@
+{
+  "id": "milestone_01a07f9d-50e8-700c-aa26-25c8e2f83305",
+  "title": "Vertical slice: one complete sector",
+  "phaseNumber": 5,
+  "description": "One fully dressed area that proves the game can be played end-to-end.",
+  "timebox": {
+    "minWeeks": 4,
+    "maxWeeks": 6
+  },
+  "gateCondition": "Standalone build runs. Save/load works across the whole slice. No blocker bugs.",
+  "demoCondition": "A player starts from title, plays 20–40 minutes, dies, reloads, and finishes the sector.",
+  "status": "planned",
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 159,
+    "endLine": 174
+  },
+  "sourceKey": "2df787295466750e",
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

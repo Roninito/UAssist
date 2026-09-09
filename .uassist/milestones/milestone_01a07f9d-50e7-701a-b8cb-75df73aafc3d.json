@@ -1,0 +1,21 @@
+{
+  "id": "milestone_01a07f9d-50e7-701a-b8cb-75df73aafc3d",
+  "title": "World progression, stealth, hacking",
+  "phaseNumber": 3,
+  "description": "The colony stops being a corridor and starts being a space with rules.",
+  "timebox": {
+    "minWeeks": 4,
+    "maxWeeks": 5
+  },
+  "gateCondition": "Save/load preserves world state (door locks, turret allegiance, collected keycards).",
+  "demoCondition": "Sneak past a camera. Hack a turret. Open a keycard door. Trigger a collapsing walkway. The camera stays off after hacking.",
+  "status": "planned",
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 122,
+    "endLine": 137
+  },
+  "sourceKey": "5c45b6a5203f3de4",
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

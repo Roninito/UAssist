@@ -1,0 +1,21 @@
+{
+  "id": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "title": "Weapons and security AI",
+  "phaseNumber": 2,
+  "description": "Combat becomes real. Enemies become dangerous.",
+  "timebox": {
+    "minWeeks": 4,
+    "maxWeeks": 5
+  },
+  "gateCondition": "AI does not get stuck on corners (navmesh + stuck-timer fallback). Weapons compile and fire.",
+  "demoCondition": "Fight two guards. Reload. Drop your weapon. Pick up theirs. Different ammo type is respected.",
+  "status": "planned",
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 102,
+    "endLine": 118
+  },
+  "sourceKey": "cd15903f21507aba",
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

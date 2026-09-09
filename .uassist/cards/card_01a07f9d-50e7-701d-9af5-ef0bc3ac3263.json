@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-701d-9af5-ef0bc3ac3263",
+  "title": "Hacking minigame v1: simple timing or node-capture game. On success, disable cameras/turrets or open doors.",
+  "milestoneId": "milestone_01a07f9d-50e7-701a-b8cb-75df73aafc3d",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 130,
+    "endLine": 130
+  },
+  "sourceKey": "94d6c79b74d8de3c",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

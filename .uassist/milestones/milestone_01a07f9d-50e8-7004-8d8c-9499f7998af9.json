@@ -1,0 +1,21 @@
+{
+  "id": "milestone_01a07f9d-50e8-7004-8d8c-9499f7998af9",
+  "title": "Narrative, NPCs, audio",
+  "phaseNumber": 4,
+  "description": "The story stops being premise and starts being discoverable.",
+  "timebox": {
+    "minWeeks": 3,
+    "maxWeeks": 4
+  },
+  "gateCondition": "Dialogue and logs survive save/load. Audio ducking works.",
+  "demoCondition": "Find a log that explains the medical pod malfunction. Talk to an NPC who warns you about a sector.",
+  "status": "planned",
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 141,
+    "endLine": 155
+  },
+  "sourceKey": "64783ca8679399ea",
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

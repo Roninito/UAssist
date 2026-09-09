@@ -1,0 +1,19 @@
+{
+  "name": "@uassist/server",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Bun.serve HTTP + WebSocket API and the web UI it serves.",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts"
+  },
+  "dependencies": {
+    "@uassist/core": "workspace:*"
+  }
+}

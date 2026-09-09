@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7005-901b-9b950a8e2d44",
+  "title": "Collectible logs: data-driven text with voice-over placeholders.",
+  "milestoneId": "milestone_01a07f9d-50e8-7004-8d8c-9499f7998af9",
+  "category": "Narrative",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 147,
+    "endLine": 147
+  },
+  "sourceKey": "f2cfce1c7501cc95",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

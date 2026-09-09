@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-701b-ada8-f5129672286d",
+  "title": "Keycard doors: locked until specific `Keycard` item is equipped/used.",
+  "milestoneId": "milestone_01a07f9d-50e7-701a-b8cb-75df73aafc3d",
+  "category": "Systems",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 128,
+    "endLine": 128
+  },
+  "sourceKey": "af265f827259a6b2",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

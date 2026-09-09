@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7017-b6d5-a1ab33f31b47",
+  "title": "Basic security guard prefab with humanoid rig.",
+  "milestoneId": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "category": "AI",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 114,
+    "endLine": 114
+  },
+  "sourceKey": "9ca34a05214d231b",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

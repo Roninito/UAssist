@@ -1,0 +1,37 @@
+{
+  "id": "card_01a07f9d-50e8-700b-8670-0a11848a69b6",
+  "title": "Gate: Narrative, NPCs, audio",
+  "description": "Dialogue and logs survive save/load. Audio ducking works.",
+  "milestoneId": "milestone_01a07f9d-50e8-7004-8d8c-9499f7998af9",
+  "category": "Infra",
+  "kind": "gate",
+  "status": "open",
+  "priority": "high",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 155,
+    "endLine": 155
+  },
+  "sourceKey": "6497fc1ea9220637",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "Dialogue and logs survive save/load.",
+      "met": false
+    },
+    {
+      "text": "Audio ducking works.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

@@ -1,0 +1,37 @@
+{
+  "id": "project_01a07f9d-50bd-7000-a121-1d424d8ebf68",
+  "name": "ColonyEscape",
+  "rootPath": "/Users/ronin/Desktop/Bun Apps/UAssist",
+  "unityProjectPath": "/Users/ronin/UnityGames/Colony Escape",
+  "workspaceScannedAt": 1788914620567,
+  "conventions": [],
+  "dailyCapUsd": 10,
+  "totalCapUsd": 200,
+  "aiConfig": {
+    "activeProviderId": "ollama",
+    "providers": [
+      {
+        "id": "ollama",
+        "kind": "ollama",
+        "name": "Ollama",
+        "baseUrl": "http://127.0.0.1:11434/v1",
+        "model": "kimi-k2.7-code:cloud",
+        "enabled": true
+      }
+    ],
+    "systemPrompt": "You are a helpful game-development assistant. You help the user think through tasks for a Unity + Blender project. Keep answers concise and practical.",
+    "maxContextMessages": 50,
+    "maxTokens": 4096,
+    "temperature": 0.7
+  },
+  "engineIntegration": {
+    "unity": {
+      "method": "cli"
+    },
+    "blender": {
+      "method": "cli"
+    }
+  },
+  "createdAt": 1788847411389,
+  "updatedAt": 1788914635980
+}

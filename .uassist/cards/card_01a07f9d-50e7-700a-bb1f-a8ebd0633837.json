@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-700a-bb1f-a8ebd0633837",
+  "title": "Health, medkits, food.",
+  "milestoneId": "milestone_01a07f9d-50e7-7006-a2de-c6c118656c5d",
+  "category": "Systems",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 91,
+    "endLine": 91
+  },
+  "sourceKey": "507d41ee891cf53f",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

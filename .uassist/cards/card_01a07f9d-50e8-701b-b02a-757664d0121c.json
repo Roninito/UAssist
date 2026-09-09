@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-701b-b02a-757664d0121c",
+  "title": "Playtesting and tuning.",
+  "milestoneId": "milestone_01a07f9d-50e8-7015-b844-f06c37d9427e",
+  "category": "Unknown",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 187,
+    "endLine": 187
+  },
+  "sourceKey": "75564bd25085c0e3",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

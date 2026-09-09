@@ -1,0 +1,49 @@
+{
+  "id": "card_01a07f9d-50e7-7018-922b-64bda66bb0a1",
+  "title": "Demo: Weapons and security AI",
+  "description": "Fight two guards. Reload. Drop your weapon. Pick up theirs. Different ammo type is respected.",
+  "milestoneId": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "category": "Gameplay",
+  "kind": "deliverable",
+  "status": "open",
+  "priority": "high",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 116,
+    "endLine": 116
+  },
+  "sourceKey": "bd65a906a84ad2d8",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "Fight two guards.",
+      "met": false
+    },
+    {
+      "text": "Reload.",
+      "met": false
+    },
+    {
+      "text": "Drop your weapon.",
+      "met": false
+    },
+    {
+      "text": "Pick up theirs.",
+      "met": false
+    },
+    {
+      "text": "Different ammo type is respected.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

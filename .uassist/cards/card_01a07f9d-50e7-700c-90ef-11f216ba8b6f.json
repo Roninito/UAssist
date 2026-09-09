@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-700c-90ef-11f216ba8b6f",
+  "title": "Radiation zones + radiation meter wearable shows danger.",
+  "milestoneId": "milestone_01a07f9d-50e7-7006-a2de-c6c118656c5d",
+  "category": "Systems",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 93,
+    "endLine": 93
+  },
+  "sourceKey": "ae23ddf3dcb251a2",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

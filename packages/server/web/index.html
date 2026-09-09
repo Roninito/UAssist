@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UAssist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="brand">UAssist</span>
+      <nav class="nav">
+        <a href="/board" aria-current="page">Board</a>
+        <a href="/project">Project</a>
+        <a href="/docs">Docs</a>
+        <a href="/decisions" id="decisions-link">Decisions<span class="nav-badge" id="decisions-badge" hidden></span></a>
+      </nav>
+      <span class="project-name" id="project-name">…</span>
+      <span class="spacer"></span>
+      <input id="search" type="search" placeholder="Search cards" aria-label="Search cards" />
+      <select id="view" aria-label="Board view"></select>
+      <button id="roadmap-toggle" title="Milestone roadmap">Roadmap</button>
+      <button id="ai-config" title="AI settings">⚙ AI</button>
+      <button id="help" title="Help (?)" aria-label="Open help">?</button>
+      <span class="counts" id="counts"></span>
+      <span class="status-dot" id="conn" data-state="syncing" title="Live updates"></span>
+    </header>
+
+    <main id="board"></main>
+
+    <div class="health-lane" id="health"></div>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

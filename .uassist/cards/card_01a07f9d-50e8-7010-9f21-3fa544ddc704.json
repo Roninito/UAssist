@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7010-9f21-3fa544ddc704",
+  "title": "Transition to next sector (loading screen).",
+  "milestoneId": "milestone_01a07f9d-50e8-700c-aa26-25c8e2f83305",
+  "category": "UI",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 168,
+    "endLine": 168
+  },
+  "sourceKey": "f5459ffe763c440c",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

@@ -1,0 +1,53 @@
+{
+  "id": "card_01a07f9d-50e7-7004-8d47-738d79db8e85",
+  "title": "Demo: Capsule in a corridor",
+  "description": "Start the game. Walk down the corridor. Jump the gap. Roll under the pipe. Climb the ledge. It feels okay.",
+  "milestoneId": "milestone_01a07f9d-50e5-7000-a340-446ef5cf52d1",
+  "category": "Gameplay",
+  "kind": "deliverable",
+  "status": "open",
+  "priority": "high",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 76,
+    "endLine": 76
+  },
+  "sourceKey": "0d6ec53bfeb70a60",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "Start the game.",
+      "met": false
+    },
+    {
+      "text": "Walk down the corridor.",
+      "met": false
+    },
+    {
+      "text": "Jump the gap.",
+      "met": false
+    },
+    {
+      "text": "Roll under the pipe.",
+      "met": false
+    },
+    {
+      "text": "Climb the ledge.",
+      "met": false
+    },
+    {
+      "text": "It feels okay.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

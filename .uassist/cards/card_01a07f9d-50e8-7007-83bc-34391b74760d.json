@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7007-83bc-34391b74760d",
+  "title": "Audio buses: ambient, music (tension layers), SFX, VO.",
+  "milestoneId": "milestone_01a07f9d-50e8-7004-8d8c-9499f7998af9",
+  "category": "Audio",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 149,
+    "endLine": 149
+  },
+  "sourceKey": "5a734ba4268991a1",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

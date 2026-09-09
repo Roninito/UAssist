@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-701a-9d8e-f48272565750",
+  "title": "Steamworks integration: achievements, cloud saves, overlay.",
+  "milestoneId": "milestone_01a07f9d-50e8-7015-b844-f06c37d9427e",
+  "category": "Infra",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 186,
+    "endLine": 186
+  },
+  "sourceKey": "0e10292a009af572",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

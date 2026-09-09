@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7017-8157-3303d7be8139",
+  "title": "Enemy variants (flame-resistant guard, electric-resistant drone).",
+  "milestoneId": "milestone_01a07f9d-50e8-7015-b844-f06c37d9427e",
+  "category": "AI",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 183,
+    "endLine": 183
+  },
+  "sourceKey": "7971d2a070a3a2ad",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

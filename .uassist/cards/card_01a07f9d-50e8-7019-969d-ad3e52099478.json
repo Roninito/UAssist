@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7019-969d-ad3e52099478",
+  "title": "Final art pass, lighting bake, optimization.",
+  "milestoneId": "milestone_01a07f9d-50e8-7015-b844-f06c37d9427e",
+  "category": "Art",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 185,
+    "endLine": 185
+  },
+  "sourceKey": "5c0b89d9d3530309",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

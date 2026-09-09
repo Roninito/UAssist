@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7001-90cb-b3b281737a97",
+  "title": "Environmental state: camera active/inactive, turret friendly/enemy, door locked/unlocked.",
+  "milestoneId": "milestone_01a07f9d-50e7-701a-b8cb-75df73aafc3d",
+  "category": "AI",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 133,
+    "endLine": 133
+  },
+  "sourceKey": "2526060d66ee1637",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

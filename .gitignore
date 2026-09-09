@@ -1,0 +1,10 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+
+# Live SQLite store — the JSON mirror in .uassist/ is the git-tracked source.
+.uassist/uassist.db
+.uassist/uassist.db-shm
+.uassist/uassist.db-wal
+.uassist/worktrees/

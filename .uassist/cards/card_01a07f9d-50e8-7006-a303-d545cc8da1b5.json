@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7006-a303-d545cc8da1b5",
+  "title": "NPC interactables: basic dialogue tree, optional branch choices.",
+  "milestoneId": "milestone_01a07f9d-50e8-7004-8d8c-9499f7998af9",
+  "category": "Narrative",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 148,
+    "endLine": 148
+  },
+  "sourceKey": "2f82b9cedadb74f9",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

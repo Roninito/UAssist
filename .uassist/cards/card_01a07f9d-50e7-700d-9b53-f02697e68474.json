@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-700d-9b53-f02697e68474",
+  "title": "Thermal disguise wearable (stealth enabler, Phase 3).",
+  "milestoneId": "milestone_01a07f9d-50e7-7006-a2de-c6c118656c5d",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 94,
+    "endLine": 94
+  },
+  "sourceKey": "111265c3e877a67c",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

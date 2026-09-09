@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7012-ae65-d651382f3e3b",
+  "title": "Reload logic per ammo type. Magazine + reserve.",
+  "milestoneId": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "category": "Unknown",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 109,
+    "endLine": 109
+  },
+  "sourceKey": "073cd7dd591b49ba",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

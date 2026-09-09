@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-701c-a003-47629d6035b5",
+  "title": "Interactable terminals: `NodeTerminal` opens hacking minigame.",
+  "milestoneId": "milestone_01a07f9d-50e7-701a-b8cb-75df73aafc3d",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 129,
+    "endLine": 129
+  },
+  "sourceKey": "f5013767f0828143",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

@@ -1,0 +1,27 @@
+{
+  "name": "uassist",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Project coordination and asset-development tracking for Unity + Blender. Bun backend, web UI, Tauri shell later.",
+  "author": "RastaCamp Studio",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "bun run --watch packages/server/src/index.ts",
+    "start": "bun run packages/server/src/index.ts",
+    "uassist": "bun run packages/cli/src/uassist.ts",
+    "build:cli": "bun build packages/cli/src/uassist.ts --compile --outfile dist/uassist",
+    "build:server": "bun build packages/server/src/index.ts --compile --outfile dist/uassist-server",
+    "build": "bun run build:cli && bun run build:server",
+    "build:web": "bun build packages/server/web/index.html --outdir dist/web --minify",
+    "test": "bun test",
+    "typecheck": "bunx tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.7.0"
+  }
+}

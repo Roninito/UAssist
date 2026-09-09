@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7018-af2f-08be835a9af4",
+  "title": "Expanded item and crafting tree.",
+  "milestoneId": "milestone_01a07f9d-50e8-7015-b844-f06c37d9427e",
+  "category": "Systems",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 184,
+    "endLine": 184
+  },
+  "sourceKey": "caf66aeb3ab4d5de",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

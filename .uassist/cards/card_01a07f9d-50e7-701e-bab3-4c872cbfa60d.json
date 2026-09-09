@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-701e-bab3-4c872cbfa60d",
+  "title": "Stealth mechanics: crouch/slow movement reduces noise, line-of-sight checks, disguise item reduces detection radius.",
+  "milestoneId": "milestone_01a07f9d-50e7-701a-b8cb-75df73aafc3d",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 131,
+    "endLine": 131
+  },
+  "sourceKey": "95c4c498ce106481",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

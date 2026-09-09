@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7001-898a-2dba15f494e6",
+  "title": "Input System map: move, look, jump, crouch, roll, interact.",
+  "milestoneId": "milestone_01a07f9d-50e5-7000-a340-446ef5cf52d1",
+  "category": "Gameplay",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 72,
+    "endLine": 72
+  },
+  "sourceKey": "ac34ce8164894911",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 3,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847607232
+}

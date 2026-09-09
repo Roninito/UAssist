@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e8-7000-bb05-ca6f5cf7a1c1",
+  "title": "Trigger volumes for hazards: unstable structures, falling debris, collapsible walkways.",
+  "milestoneId": "milestone_01a07f9d-50e7-701a-b8cb-75df73aafc3d",
+  "category": "Unknown",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 132,
+    "endLine": 132
+  },
+  "sourceKey": "81b663c4f0dc13ae",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-700b-a6db-21d3ec0e45d9",
+  "title": "Oxygen zones: drain while inside, refill at stations/wearable tank extends time.",
+  "milestoneId": "milestone_01a07f9d-50e7-7006-a2de-c6c118656c5d",
+  "category": "Systems",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 92,
+    "endLine": 92
+  },
+  "sourceKey": "5649abc9cbcfa83f",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

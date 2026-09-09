@@ -1,0 +1,37 @@
+{
+  "id": "card_01a07f9d-50e7-700f-bf91-a7ad2bc1e707",
+  "title": "Gate: Survival and items",
+  "description": "All items serialize/deserialize correctly. Save/load round-trips with items intact.",
+  "milestoneId": "milestone_01a07f9d-50e7-7006-a2de-c6c118656c5d",
+  "category": "Infra",
+  "kind": "gate",
+  "status": "open",
+  "priority": "high",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 98,
+    "endLine": 98
+  },
+  "sourceKey": "ea21bd0c29c299d5",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "All items serialize/deserialize correctly.",
+      "met": false
+    },
+    {
+      "text": "Save/load round-trips with items intact.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

@@ -1,0 +1,33 @@
+{
+  "id": "card_01a07f9d-50e8-7013-a10b-a15afc6af4fe",
+  "title": "Demo: Vertical slice: one complete sector",
+  "description": "A player starts from title, plays 20–40 minutes, dies, reloads, and finishes the sector.",
+  "milestoneId": "milestone_01a07f9d-50e8-700c-aa26-25c8e2f83305",
+  "category": "Gameplay",
+  "kind": "deliverable",
+  "status": "open",
+  "priority": "high",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 172,
+    "endLine": 172
+  },
+  "sourceKey": "b2d6f0e825051a75",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [
+    {
+      "text": "A player starts from title, plays 20–40 minutes, dies, reloads, and finishes the sector.",
+      "met": false
+    }
+  ],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}

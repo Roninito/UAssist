@@ -1,0 +1,27 @@
+{
+  "id": "card_01a07f9d-50e7-7014-be5b-ee0626416b96",
+  "title": "AI perception: vision cone, hearing radius, occlusion.",
+  "milestoneId": "milestone_01a07f9d-50e7-7010-b09f-e19c87c6873e",
+  "category": "AI",
+  "kind": "task",
+  "status": "open",
+  "priority": "normal",
+  "assignee": {
+    "kind": "unassigned"
+  },
+  "timeSpentHours": 0,
+  "source": {
+    "file": "unity-colony-build-plan.md",
+    "startLine": 111,
+    "endLine": 111
+  },
+  "sourceKey": "87f12fb3dae842c7",
+  "dependencies": [],
+  "blockedBy": [],
+  "related": [],
+  "acceptance": [],
+  "tags": [],
+  "version": 1,
+  "createdAt": 1788847411429,
+  "updatedAt": 1788847411429
+}
