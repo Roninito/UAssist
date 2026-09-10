@@ -112,7 +112,9 @@ function renderControls(): void {
 
   const source = el("select");
   source.className = "filter-select";
-  source.append(el("option", undefined, "All sources"));
+  const allOpt = el("option", undefined, "All sources");
+  allOpt.value = "";
+  source.append(allOpt);
   for (const s of ["unity", "blender"]) {
     const opt = el("option", undefined, s);
     opt.value = s;
