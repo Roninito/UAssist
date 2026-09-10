@@ -3,7 +3,8 @@
   "name": "ColonyEscape",
   "rootPath": "/Users/ronin/Desktop/Bun Apps/UAssist",
   "unityProjectPath": "/Users/ronin/UnityGames/Colony Escape",
-  "workspaceScannedAt": 1788914620567,
+  "blenderSourcePath": "/Users/ronin/UnityGames/Colony Escape/blender",
+  "workspaceScannedAt": 1789006502061,
   "conventions": [],
   "dailyCapUsd": 10,
   "totalCapUsd": 200,
@@ -33,5 +34,5 @@
     }
   },
   "createdAt": 1788847411389,
-  "updatedAt": 1788914635980
+  "updatedAt": 1788920479508
 }

@@ -13,6 +13,7 @@ import index from "../web/index.html";
 import project from "../web/project.html";
 import docs from "../web/docs.html";
 import decisions from "../web/decisions.html";
+import assets from "../web/assets.html";
 import {
   writeInstanceFile,
   removeInstanceFile,
@@ -48,6 +49,7 @@ import {
   postRegistryStart,
   postWorkspaceScan,
 } from "./workspace.ts";
+import { getAssetDetail, getAssetSummary, listAssets } from "./assets.ts";
 import { getDoc, getDocChat, listDocs, postDocChat, putDoc } from "./docs.ts";
 import { postPlanImport } from "./plans.ts";
 import { listSuggestions, postAcceptSuggestion, postHoldSuggestion, postRejectSuggestion } from "./suggestions.ts";
@@ -192,6 +194,7 @@ export async function startServer(options: ServeOptions = {}) {
       "/project": project,
       "/docs": docs,
       "/decisions": decisions,
+      "/assets": assets,
 
       "/api/version": () => json({ name: "UAssist", version: VERSION }),
       "/api/instance": () => json(instance),
@@ -239,6 +242,9 @@ export async function startServer(options: ServeOptions = {}) {
       "/api/workspace": () => getWorkspace(ctx),
       "/api/workspace/scan": { POST: () => postWorkspaceScan(ctx) },
       "/api/workspace/assets": (req) => getWorkspaceAssets(ctx, req),
+      "/api/assets": { GET: (req) => listAssets(ctx, req) },
+      "/api/assets/summary": () => getAssetSummary(ctx),
+      "/api/assets/:key": { GET: (req) => getAssetDetail(ctx, req.params.key) },
       "/api/registry": () => getRegistry(ctx),
       "/api/registry/:id/start": { POST: (req) => postRegistryStart(ctx, req.params.id) },
       "/api/plans/import": { POST: (req) => postPlanImport(ctx, req) },

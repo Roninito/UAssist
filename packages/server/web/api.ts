@@ -20,12 +20,53 @@ import type {
   Job,
   Milestone,
   Project,
+  Severity,
   Status,
   Suggestion,
   SuggestionStatus,
   WorkspaceAsset,
   WorkspaceStatus,
 } from "@uassist/core";
+
+export interface AssetSummary {
+  totalAssets: number;
+  bySource: Record<string, number>;
+  byKind: Record<string, number>;
+  uncoveredCount: number;
+  orphanedCardCount: number;
+  openHealthCount: number;
+  lastScannedAt?: number;
+}
+
+export interface AssetDetail {
+  asset: {
+    source: string;
+    path: string;
+    kind: string;
+    sizeBytes: number;
+    mtimeMs: number;
+    classNames?: string[];
+    hash: string;
+  };
+  cards: { id: string; title: string; status: Status; priority: string }[];
+  health: { id: string; severity: Severity; message: string; resolved: boolean }[];
+  related: { source: string; path: string; kind: string }[];
+  seq: number;
+}
+
+export interface AssetListResponse {
+  assets: {
+    source: string;
+    path: string;
+    kind: string;
+    sizeBytes: number;
+    mtimeMs: number;
+    classNames?: string[];
+    cardCount: number;
+    openHealthCount: number;
+  }[];
+  seq: number;
+}
 
 export type { Suggestion, SuggestionStatus } from "@uassist/core";
 export type { EngineIntegrationConfig, EngineIntegrationMethod, EngineMethodConfig } from "@uassist/core";
@@ -309,6 +350,13 @@ export const api = {
 
   holdSuggestion: (id: string) =>
     request<{ suggestion: Suggestion; seq: number }>(`/api/suggestions/${id}/hold`, { method: "POST" }),
+
+  assetSummary: () => request<{ summary: AssetSummary; seq: number }>("/api/assets/summary"),
+
+  assets: (queryString?: string) =>
+    request<AssetListResponse>(`/api/assets${queryString ? `?${queryString}` : ""}`),
+
+  assetDetail: (key: string) => request<AssetDetail>(`/api/assets/${encodeURIComponent(key)}`),
 };
 
 /** Map a picked catalog entry to the Anchor variant it best represents —
