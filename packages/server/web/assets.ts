@@ -69,45 +69,27 @@ function renderSummary(): void {
 
   const grid = el("div", "summary-grid");
 
-  const totalCard = el("div", "summary-card");
-  totalCard.append(el("div", "summary-number", String(s.totalAssets)));
-  totalCard.append(el("div", "summary-label", "Total assets"));
-  grid.append(totalCard);
-
-  const uncoveredCard = el("div", "summary-card");
-  uncoveredCard.append(el("div", "summary-number", String(s.uncoveredCount)));
-  uncoveredCard.append(el("div", "summary-label", "Uncovered"));
-  grid.append(uncoveredCard);
-
-  const orphanedCard = el("div", "summary-card");
-  orphanedCard.append(el("div", "summary-number", String(s.orphanedCardCount)));
-  orphanedCard.append(el("div", "summary-label", "Orphaned cards"));
-  grid.append(orphanedCard);
-
-  const healthCard = el("div", "summary-card");
-  healthCard.append(el("div", "summary-number", String(s.openHealthCount)));
-  healthCard.append(el("div", "summary-label", "Open health items"));
-  grid.append(healthCard);
+  grid.append(makeSummaryCard(String(s.totalAssets), "Total assets", ""));
+  grid.append(makeSummaryCard(String(s.uncoveredCount), "Uncovered", s.uncoveredCount > 0 ? "warn" : ""));
+  grid.append(makeSummaryCard(String(s.orphanedCardCount), "Orphaned cards", s.orphanedCardCount > 0 ? "warn" : ""));
+  grid.append(makeSummaryCard(String(s.openHealthCount), "Open health items", s.openHealthCount > 0 ? "warn" : ""));
 
   if (s.lastScannedAt) {
-    const scanCard = el("div", "summary-card");
-    scanCard.append(el("div", "summary-number", formatDate(s.lastScannedAt)));
-    scanCard.append(el("div", "summary-label", "Last scan"));
-    grid.append(scanCard);
+    grid.append(makeSummaryCard(formatDate(s.lastScannedAt), "Last scan", ""));
   }
 
   summaryHost.append(grid);
 
   const breakdown = el("div", "breakdown");
   breakdown.append(el("h3", undefined, "By source"));
-  const sourceList = el("ul");
+  const sourceList = el("ul", "breakdown-list");
   for (const [k, v] of Object.entries(s.bySource).sort((a, b) => b[1] - a[1])) {
     sourceList.append(el("li", undefined, `${k}: ${v}`));
   }
   breakdown.append(sourceList);
 
   breakdown.append(el("h3", undefined, "By kind"));
-  const kindList = el("ul");
+  const kindList = el("ul", "breakdown-list");
   for (const [k, v] of Object.entries(s.byKind).sort((a, b) => b[1] - a[1])) {
     kindList.append(el("li", undefined, `${k}: ${v}`));
   }
@@ -116,12 +98,20 @@ function renderSummary(): void {
   summaryHost.append(breakdown);
 }
 
+function makeSummaryCard(number: string, label: string, tone: "" | "warn"): HTMLElement {
+  const card = el("div", `summary-card ${tone}`);
+  card.append(el("div", "summary-number", number));
+  card.append(el("div", "summary-label", label));
+  return card;
+}
+
 function renderControls(): void {
   controlsHost.replaceChildren();
   const form = el("form", "assets-form");
   form.addEventListener("submit", (e) => e.preventDefault());
 
   const source = el("select");
+  source.className = "filter-select";
   source.append(el("option", undefined, "All sources"));
   for (const s of ["unity", "blender"]) {
     const opt = el("option", undefined, s);
@@ -135,6 +125,7 @@ function renderControls(): void {
   });
 
   const kind = el("input");
+  kind.className = "filter-input";
   kind.placeholder = "Filter by kind";
   kind.value = state.kind;
   kind.addEventListener("input", () => {
@@ -143,6 +134,7 @@ function renderControls(): void {
   });
 
   const q = el("input");
+  q.className = "filter-input";
   q.type = "search";
   q.placeholder = "Search path…";
   q.value = state.q;
@@ -151,7 +143,7 @@ function renderControls(): void {
     void loadAssets();
   });
 
-  const uncovered = el("label", "inline", "Uncovered only");
+  const uncovered = el("label", "filter-check inline");
   const uncoveredBox = el("input");
   uncoveredBox.type = "checkbox";
   uncoveredBox.checked = state.uncoveredOnly;
@@ -159,7 +151,7 @@ function renderControls(): void {
     state.uncoveredOnly = uncoveredBox.checked;
     void loadAssets();
   });
-  uncovered.append(uncoveredBox);
+  uncovered.append(uncoveredBox, "Uncovered only");
 
   const refresh = el("button", "secondary", "Refresh");
   refresh.addEventListener("click", () => {
@@ -194,22 +186,30 @@ function renderList(): void {
   const tbody = el("tbody");
   for (const a of state.assets) {
     const tr = el("tr");
+    if (a.openHealthCount > 0) tr.classList.add("has-health");
     const key = encodeURIComponent(`${a.source}:${a.path}`);
     const pathCell = el("td");
-    const link = el("a", undefined, a.path);
+    const link = el("a", "asset-link", a.path);
     link.href = `/assets?detail=${key}`;
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      renderDetail(a);
+      void renderDetail(a);
     });
     pathCell.append(link);
     tr.append(pathCell);
     tr.append(el("td", undefined, a.source));
     tr.append(el("td", undefined, a.kind));
-    tr.append(el("td", undefined, formatBytes(a.sizeBytes)));
-    tr.append(el("td", undefined, formatDate(a.mtimeMs)));
-    tr.append(el("td", undefined, String(a.cardCount)));
-    tr.append(el("td", undefined, a.openHealthCount > 0 ? String(a.openHealthCount) : "—"));
+    tr.append(el("td", "num", formatBytes(a.sizeBytes)));
+    tr.append(el("td", "date", formatDate(a.mtimeMs)));
+    tr.append(el("td", "num", String(a.cardCount)));
+    const healthCell = el("td", "num");
+    if (a.openHealthCount > 0) {
+      const badge = el("span", "badge badge-bad", String(a.openHealthCount));
+      healthCell.append(badge);
+    } else {
+      healthCell.textContent = "—";
+    }
+    tr.append(healthCell);
     tbody.append(tr);
   }
   table.append(tbody);
@@ -235,11 +235,23 @@ async function renderDetail(asset: AssetListItem): Promise<void> {
     panel.append(el("p", undefined, `Classes: ${detail.asset.classNames.join(", ")}`));
   }
 
+  const meta = el("div", "asset-meta");
+  meta.append(el("span", "chip", asset.source));
+  meta.append(el("span", "chip", asset.kind));
+  meta.append(el("span", undefined, formatBytes(asset.sizeBytes)));
+  meta.append(el("span", undefined, formatDate(asset.mtimeMs)));
+  panel.append(meta);
+
+  if (detail.asset.classNames?.length) {
+    const classes = el("p", "asset-classes", `Classes: ${detail.asset.classNames.join(", ")}`);
+    panel.append(classes);
+  }
+
   panel.append(el("h3", undefined, `Cards (${detail.cards.length})`));
   if (detail.cards.length === 0) {
     panel.append(el("p", "placeholder", "No cards anchored to this asset."));
   } else {
-    const list = el("ul");
+    const list = el("ul", "link-list");
     for (const c of detail.cards) {
       const item = el("li");
       const a = el("a", undefined, c.title);
@@ -255,10 +267,11 @@ async function renderDetail(asset: AssetListItem): Promise<void> {
   if (detail.health.length === 0) {
     panel.append(el("p", "placeholder", "No health items for this asset."));
   } else {
-    const list = el("ul");
+    const list = el("ul", "health-list");
     for (const h of detail.health) {
       const item = el("li", h.resolved ? "resolved" : "");
-      item.textContent = `${h.severity}: ${h.message}${h.resolved ? " (resolved)" : ""}`;
+      const severity = el("span", `severity-${h.severity}`, h.severity);
+      item.append(severity, ` ${h.message}${h.resolved ? " (resolved)" : ""}`);
       list.append(item);
     }
     panel.append(list);
@@ -266,7 +279,7 @@ async function renderDetail(asset: AssetListItem): Promise<void> {
 
   if (detail.related.length > 0) {
     panel.append(el("h3", undefined, `Related in same folder (${detail.related.length})`));
-    const list = el("ul");
+    const list = el("ul", "link-list");
     for (const r of detail.related.slice(0, 20)) {
       list.append(el("li", undefined, r.path));
     }
